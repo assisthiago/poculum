@@ -27,8 +27,8 @@ export default function Header() {
                             className="d-flex align-items-center text-decoration-none"
                             onClick={() => setShowAddress(true)}
                         >
-                            <span className="me-1 fw-light">Lorem Ipsum Dolor Sit Amet, 9999</span>
                             <GeoAltFill size={15} />
+                            <span className="ms-1 fw-light">Lorem Ipsum Dolor Sit Amet, 9999</span>
                         </Button>
                         <Button variant="link" size="sm" onClick={() => setShowNotifications(true)}>
                             <BellFill size={15} />
