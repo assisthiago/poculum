@@ -1,43 +1,38 @@
+import Item from "@/components/Item";
 import Layout from "@/components/Layout";
 import { Badge, Button, Card, Col, Container, Form, Image, InputGroup, Row, Stack } from "react-bootstrap";
 import { Backspace } from "react-bootstrap-icons";
 
+
+const ITEMS = [
+    { id: 1, name: "Aliqua Ut", price: 234.56, image: "https://placehold.co/100" },
+    { id: 2, name: "Lorem Ipsum", price: 1234.56, image: "https://placehold.co/100" },
+    { id: 3, name: "Dolor Sit", price: 789.01, image: "https://placehold.co/100" },
+    { id: 4, name: "Amet Consectetur", price: 2345.67, image: "https://placehold.co/100" },
+    { id: 5, name: "Adipiscing Elit", price: 890.12, image: "https://placehold.co/100" },
+    { id: 6, name: "Sed Do", price: 3456.78, image: "https://placehold.co/100" },
+    { id: 7, name: "Eiusmod Tempor", price: 901.23, image: "https://placehold.co/100" },
+    { id: 8, name: "Incididunt Ut", price: 4567.89, image: "https://placehold.co/100" },
+    { id: 9, name: "Labore Et", price: 123.45, image: "https://placehold.co/100" },
+    { id: 10, name: "Dolore Magna", price: 6789.01, image: "https://placehold.co/100" },
+]
+
+
 export default function Home() {
-    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
     return (
         <Layout>
             <Container fluid>
                 <Stack direction="horizontal" gap={3} className="justify-content-between">
-                    <Badge bg="secondary" className="fw-light">lorem ipsum</Badge>
+                    <Badge bg="secondary" className="fw-light shadow-sm">lorem ipsum</Badge>
                     <Button variant="link" size="sm" className="text-decoration-none fw-light">
                         Limpar
                         <Backspace size={15} color="royalblue" className="ms-1" />
                     </Button>
                 </Stack>
                 <Row className="mt-3">
-                    {items.map((item, index) => (
-                        <Col key={index} sm={12} className="mb-3">
-                            <Card className="shadow-sm">
-                                <Card.Body className="">
-                                    <Stack direction="horizontal" gap={3} className="justify-content-between">
-                                        <div className="position-relative">
-                                            <Image src="https://placehold.co/100" alt="" rouded fluid />
-                                        </div>
-                                        <Stack direction="vertical" className="justify-content-between">
-                                            <h5 className="mb-0 fw-light fs-6">Lorem Ipsum Dolor Sit Amet</h5>
-                                            <Stack direction="horizontal" gap={3} className="justify-content-between">
-                                                <h5 className="mb-0 fw-light fs-6">999.99</h5>
-                                                <InputGroup className="w-50">
-                                                    <Button variant="light">-</Button>
-                                                    <Form.Control type="text" value="1" readOnly className="border-light text-center" />
-                                                    <Button variant="warning">+</Button>
-                                                </InputGroup>
-                                            </Stack>
-                                        </Stack>
-                                    </Stack>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                    {ITEMS.map((item, index) => (
+                        <Item key={index} instance={item} />
                     ))}
                 </Row>
             </Container>
