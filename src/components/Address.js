@@ -42,7 +42,7 @@ export default function Address({ show, setShow }) {
                     </InputGroup>
                 </Form>
             </Offcanvas.Body>
-            <Offcanvas.Body class="position-relative p-3">
+            <Offcanvas.Body className="position-relative p-3">
                 <Button
                     variant="warning"
                     className="w-100 text-decoration-none shadow"

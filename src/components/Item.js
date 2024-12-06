@@ -2,18 +2,18 @@ import { useState } from "react";
 import { Button, Card, Col, Form, Image, InputGroup, Offcanvas, Stack } from "react-bootstrap"
 import { Trash3 } from "react-bootstrap-icons"
 
-export default function Item({ key, instance, enableDelete = false }) {
+export default function Item({ instance, enableDelete = false }) {
 
     const [show, setShow] = useState(false)
 
     return (
         <>
-            <Col key={key} sm={12} className="mb-3">
+            <Col sm={12} className="mb-3">
                 <Card className="shadow-sm">
                     <Card.Body className="">
                         <Stack direction="horizontal" gap={3} className="justify-content-between">
                             <div className="position-relative">
-                                <Image src={instance.image} alt={instance.name} rouded fluid />
+                                <Image src={instance.image} alt={instance.name} rounded fluid />
                             </div>
                             <Stack direction="vertical" className="justify-content-between">
                                 <Stack direction="horizontal" className="justify-content-between">

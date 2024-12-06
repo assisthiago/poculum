@@ -1,7 +1,7 @@
 import Address from "@/components/Address";
 import Item from "@/components/Item";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Badge, Button, Card, Col, Container, Form, Navbar, Row, Stack } from "react-bootstrap";
 import { ArrowLeft, CarFrontFill, CartPlusFill, HouseFill, Mailbox2Flag, PencilSquare, PersonWalking, Wallet2 } from "react-bootstrap-icons";
 
@@ -15,6 +15,10 @@ const ITEMS = [
 
 export default function Cart() {
     const [showAddress, setShowAddress] = useState(false);
+
+    useEffect(() => {
+        document.title = "Poculum - Carrinho";
+    }, []);
 
     return (
         <>
