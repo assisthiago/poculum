@@ -36,7 +36,7 @@ export default function Header() {
                     </Stack>
                     <Form className="d-block w-100">
                         <InputGroup>
-                            <Form.Control type="search" placeholder="Buscar itens" className="mr-2 shadow-sm" />
+                            <Form.Control type="search" placeholder="Buscar produtos" className="mr-2 shadow-sm" />
                             <Button variant="warning" className="shadow-sm"><Search size={15} /></Button>
                         </InputGroup>
                     </Form>
