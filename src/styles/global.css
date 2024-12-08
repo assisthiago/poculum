@@ -5,3 +5,13 @@
 .text-link {
     color: #0d6efd !important;
 }
+
+.nav-underline .nav-link {
+    color: black !important;
+}
+
+.nav-underline .nav-link.active,
+.nav-underline .show>.nav-link {
+    color: black !important;
+    border-bottom: 2px solid black !important;
+}

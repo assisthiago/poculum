@@ -171,7 +171,7 @@ export default function Cart() {
             </main>
             <Navbar sticky="bottom" className="w-100">
                 <Container fluid className="w-100 py-2">
-                    <Link href="/" className="w-100">
+                    <Link href="/payment" className="w-100">
                         <Button variant="warning" className="shadow w-100 d-inline-flex justify-content-center align-items-center">
                             <Wallet2 size={20} className="me-2" />
                             Selecionar pagamento

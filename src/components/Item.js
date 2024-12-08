@@ -9,8 +9,8 @@ export default function Item({ instance, enableDelete = false }) {
     return (
         <>
             <Col sm={12} className="mb-3">
-                <Card className="shadow-sm">
-                    <Card.Body className="">
+                <Card border="light" className="shadow">
+                    <Card.Body>
                         <Stack direction="horizontal" gap={3} className="justify-content-between">
                             <div className="position-relative">
                                 <Image src={instance.image} alt={instance.name} rounded fluid />

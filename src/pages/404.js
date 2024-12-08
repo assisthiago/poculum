@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useEffect } from "react";
-import { Button, Container, Form, InputGroup, Navbar, Stack } from "react-bootstrap";
+import { Button, Container, Navbar, Stack } from "react-bootstrap";
 import { ArrowLeft } from "react-bootstrap-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -28,7 +27,7 @@ export default function Custom404() {
                         <h1 className="fw-light text-uppercase">Página não encontrada</h1>
                         <p className="text-muted">A página não existe ou foi removida.</p>
                         <Link href="/">
-                            <Button variant="link text-decoration-none">Voltar</Button>
+                            <Button variant="link" className="text-decoration-none">Voltar</Button>
                         </Link>
                     </Stack>
                 </Container>
