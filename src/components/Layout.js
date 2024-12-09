@@ -2,12 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Footer from './Footer';
 
-export default function Layout({ children }) {
+export default function Layout({ children, page = "" }) {
     return (
-        <>
-            <Header />
+        <div>
+            <Header page={page} />
             <main>{children}</main>
-            <Footer />
-        </>
+            <Footer page={page} />
+        </div>
     );
 }

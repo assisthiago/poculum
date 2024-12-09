@@ -37,6 +37,7 @@ export default function Item({ instance, enableDelete = false }) {
                     </Card.Body>
                 </Card>
             </Col>
+
             <Offcanvas placement="bottom" show={show} onHide={() => setShow(false)} responsive="lg">
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Deseja remover este produto?</Offcanvas.Title>

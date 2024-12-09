@@ -3,7 +3,7 @@ import { ListColumnsReverse, CartFill, Search } from "react-bootstrap-icons";
 
 const { Navbar, Container, Stack, Button } = require("react-bootstrap");
 
-export default function Footer() {
+export default function Footer({ page = "" }) {
     return (
         <>
             <Navbar sticky="bottom" className="bg-white flex-column py-0">
@@ -24,13 +24,29 @@ export default function Footer() {
                 <Container fluid className="border-top border-secondary-subtle py-1">
                     <Stack direction="horizontal" className="justify-content-around w-100">
                         <Link href="/">
-                            <Button variant="link" size="sm" className="text-decoration-none fw-bold">
+                            <Button
+                                variant="link"
+                                size="sm"
+                                className={
+                                    page === ""
+                                        ? "fw-bold text-decoration-none"
+                                        : "text-decoration-none"
+                                }
+                            >
                                 <Search size={20} className="mb-1" />
                                 <small className="d-block fs-small text-black">Buscar</small>
                             </Button>
                         </Link>
                         <Link href="/orders">
-                            <Button variant="link" size="sm" className="text-decoration-none">
+                            <Button
+                                variant="link"
+                                size="sm"
+                                className={
+                                    page === "orders"
+                                        ? "fw-bold text-decoration-none"
+                                        : "text-decoration-none"
+                                }
+                            >
                                 <ListColumnsReverse size={20} className="mb-1" />
                                 <small className="d-block fs-small text-black">Pedidos</small>
                             </Button>
